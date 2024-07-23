@@ -8,6 +8,7 @@ const ReferralForm = ({ handleClose }) => {
   const onSubmit = async data => {
     console.log(data);
     // const res = await fetch('http://localhost:3000/api/referral', {
+    // Live API URL
     const res = await fetch("https://refer-and-earn-oth0.onrender.com/api/referral", {
       method: 'POST',
       headers: {
