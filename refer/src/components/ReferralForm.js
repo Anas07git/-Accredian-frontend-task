@@ -7,16 +7,18 @@ const ReferralForm = ({ handleClose }) => {
 
   const onSubmit = async data => {
     console.log(data);
-    const res = await fetch('http://localhost:3000/api/referral', {
     // Live API URL
     // const res = await fetch("https://refer-and-earn-oth0.onrender.com/api/referral", {
+      const res = await fetch('http://localhost:3000/api/referral', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     })
-    console.log('the response from the backend',res);
+    
+
+    console.log('the response from the backend',res)
     handleClose();
   };
 
@@ -74,7 +76,7 @@ const ReferralForm = ({ handleClose }) => {
         render={({ field }) => (
           <TextField
             {...field}
-            label="Friend's Name"
+            label="This field must be unique everytime" 
             fullWidth
             margin="normal"
             error={!!errors.refereeName}
