@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextField, Button, Box, Typography } from '@mui/material';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form'
+import axios from 'axios'
 
 const ReferralForm = ({ handleClose }) => {
   const { handleSubmit, control, formState: { errors } } = useForm();
@@ -9,16 +10,19 @@ const ReferralForm = ({ handleClose }) => {
     console.log(data);
     // Live API URL
     // const res = await fetch("https://refer-and-earn-oth0.onrender.com/api/referral", {
-      const res = await fetch('http://localhost:3000/api/referral', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
+    //   const res = await fetch('http://localhost:3000/api/referral', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    const url = "http://localhost:3000/api/referral"
+    
+    const res = await axios.post(url , data)
+    console.log('the response from backend',res.data);
     
 
-    console.log('the response from the backend',res)
     handleClose();
   };
 
