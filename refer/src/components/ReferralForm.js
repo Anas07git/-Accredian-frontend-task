@@ -8,16 +8,8 @@ const ReferralForm = ({ handleClose }) => {
 
   const onSubmit = async data => {
     console.log(data);
-    // Live API URL
-    // const res = await fetch("https://refer-and-earn-oth0.onrender.com/api/referral", {
-    //   const res = await fetch('http://localhost:3000/api/referral', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    const url = "http://127.0.0.1:3000/api/referral"
+    const url = " http://localhost:3001/api/referral"
+    const baseUrl = "https://refer-and-earn-eick.onrender.com/api/referral"
     
     // const res = await axios.post(url , data)
     // console.log('the response from backend',res);
