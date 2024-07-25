@@ -17,7 +17,7 @@ const ReferralForm = ({ handleClose }) => {
     //   },
     //   body: JSON.stringify(data),
     // })
-    const url = "http://localhost:3000/api/referral"
+    const url = "http://127.0.0.1:3000/api/referral"
     
     // const res = await axios.post(url , data)
     // console.log('the response from backend',res);
