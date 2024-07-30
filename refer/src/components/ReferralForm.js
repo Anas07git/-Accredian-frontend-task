@@ -14,7 +14,7 @@ const ReferralForm = ({ handleClose }) => {
     // const res = await axios.post(url , data)
     // console.log('the response from backend',res);
 
-    axios.post(url,data).then((res) => {
+    axios.post(baseUrl,data).then((res) => {
       console.log('the response backend',res);
     }).catch((err) => {
       console.log('the error',err);
