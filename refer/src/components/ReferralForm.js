@@ -9,7 +9,7 @@ const ReferralForm = ({ handleClose }) => {
   const onSubmit = async data => {
     console.log(data);
     const url = " http://localhost:3001/api/referral"
-    const baseUrl = "https://accredian-backend-task-1-i7lc.onrender.com/api/referral"
+    const baseUrl = "https://accredian-backend-task-fywy.onrender.com/api/referral"
     
     // const res = await axios.post(url , data)
     // console.log('the response from backend',res);
